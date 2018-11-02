@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/clone-disk.csproj"
+                "${workspaceFolder}/fake-sd-card-tester.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

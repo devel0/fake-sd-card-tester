@@ -13,9 +13,8 @@ namespace clone_disk
         static void Main(string[] args)
         {
             if (args.Length < 1)
-            {
-                Console.WriteLine($"test fake sd card");
-                Console.WriteLine($"   {Assembly.GetExecutingAssembly().GetName().Name} <sd-card> [step]");
+            {                
+                Console.WriteLine($"{Assembly.GetExecutingAssembly().GetName().Name} <sd-card> [step]");
                 Console.WriteLine($"   sd-card   device (eg. /dev/sdb)");
                 Console.WriteLine($"   step      step between byte check ( default=64m ) ; bytes ; valid suffixes m");
                 System.Environment.Exit(1);
