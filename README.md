@@ -12,9 +12,10 @@ fast sd card tester
   - `dotnet bin/Debug/net5.0/fake-sd-card-test.dll`
 - notes:
   - disk disk must umounted
-  - need to have read write permission to device
-  - double check source and destination device **the program not ask for a confirmation after started**
+  - need to have read write permission to device  
   - after test may need to recreate partition table ( fdisk )
+
+:warning: double check source and destination device **the program will not ask for a confirmation after started**
 
 ## syntax
 
