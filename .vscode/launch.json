@@ -10,20 +10,18 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.0/fake-sd-card-tester.dll",
-            "args": [ "/dev/sdb", "1m" ],
+            "program": "${workspaceFolder}/bin/Debug/net5.0/fake-sd-card-test.dll",
+            "args": [],
             "cwd": "${workspaceFolder}",
-            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
-            //"console": "integratedTerminal",
-            "stopAtEntry": false,
-            "internalConsoleOptions": "openOnSessionStart"
+            "stopAtEntry": false
         },
         {
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach",
-            "processId": "${comma nd:pickProcess}"
+            "processId": "${command:pickProcess}"
         }
-    ,]
+    ]
 }

@@ -7,9 +7,9 @@ fast sd card tester
 - installation
   - install [dotnet](https://www.microsoft.com/net/learn/get-started-with-dotnet-tutorial) by choosing your distribution version
   - clone repo
-  - `cd clone-disk ; dotnet build`
+  - `cd fake-sd-card-tester ; dotnet build`
 - execution ( from clone-disk directory )
-  - `dotnet bin/Debug/netcoreapp2.0/fake-sd-card-tester.dll`
+  - `dotnet bin/Debug/net5.0/fake-sd-card-test.dll`
 - notes:
   - disk disk must umounted
   - need to have read write permission to device

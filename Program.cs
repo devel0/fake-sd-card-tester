@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
-using SearchAThing.NETCoreUtil;
+using SearchAThing;
 
 namespace clone_disk
 {
