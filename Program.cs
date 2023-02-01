@@ -1,9 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using System.Threading;
-using System.Threading.Tasks;
-using SearchAThing;
+
+using SearchAThing.Ext;
+using static SearchAThing.Ext.Toolkit;
+
+using SearchAThing.Util;
+using static SearchAThing.Util.Toolkit;
 
 namespace clone_disk
 {
@@ -13,7 +16,7 @@ namespace clone_disk
         static void Main(string[] args)
         {
             if (args.Length < 1)
-            {                
+            {
                 Console.WriteLine($"{Assembly.GetExecutingAssembly().GetName().Name} <sd-card> [step]");
                 Console.WriteLine($"   sd-card   device (eg. /dev/sdb)");
                 Console.WriteLine($"   step      step between byte check ( default=64m ) ; bytes ; valid suffixes m");
@@ -45,7 +48,7 @@ namespace clone_disk
             var aryback = new byte[1];
 
             while (off < deviceSize)
-            {                
+            {
                 Console.WriteLine($"checking offset {off} [{((long)off).HumanReadable()}]");
                 try
                 {
@@ -62,6 +65,9 @@ namespace clone_disk
                         Console.WriteLine($"  * fake detected at offset {off} [{off.HumanReadable()}]");
                         break;
                     }
+
+                    if (Environment.OSVersion.Platform == PlatformID.Unix)
+                        Mono.Unix.Native.Syscall.sync();
                 }
                 catch (Exception ex)
                 {
